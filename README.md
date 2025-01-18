@@ -10,3 +10,5 @@ Change the location where this lives to `C:git`. If this location does not exist
 ### Open in VSCode
 * Open VSCode
 * In the sidebar, select the 3rd item, `Source Control`. Looks like: branch with circles on the ends
+
+:P
