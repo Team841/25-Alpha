@@ -5,13 +5,13 @@
 
 ### Clone this repository
 Click on the green `<> Code` button and copy the URL `https://github.com/Team841/25-Alpha.git`
-![README images\git clone.png]{width=100}(https://github.com/Team841/25-Alpha/blob/6a4490de7e4bc38de89edbfab2fabbcfa6580c2a/README%20images/git%20clone.png)
+<img src="https://github.com/Team841/25-Alpha/blob/6a4490de7e4bc38de89edbfab2fabbcfa6580c2a/README%20images/git%20clone.png" width="200">
 
 ### Open in VSCode
 * Open VSCode
 * In the sidebar, select the 3rd item, `Source Control`. Looks like: branch with circles on the ends.
 * `Clone Repository` and paste the URL from above. Hit `<enter>`.
-![README images\VsCode Clone Git.png]{width=500}(https://github.com/Team841/25-Alpha/blob/26c6bdb7ae275f7367ead4a85beed891c9628d6a/README%20images/VsCode%20Clone%20Git.png)
+<img src="https://github.com/Team841/25-Alpha/blob/26c6bdb7ae275f7367ead4a85beed891c9628d6a/README%20images/VsCode%20Clone%20Git.png" width="500">
 * Change the location where this lives to `C:git`. If this location does not exist, create a new folder called `git` in `C:`
 
 You should now have the repo set up in VSCode.
