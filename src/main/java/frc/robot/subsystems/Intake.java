@@ -20,14 +20,25 @@ public class Intake extends SubsystemBase {
     intakeMotor.getConfigurator().apply(IntakeConstants.configs);
     /*Apply a current configuration to the motor */
     intakeMotor.getConfigurator().refresh(IntakeConstants.currentLimits);
-    intakeMotor.getConfigurator().apply(IntakeConstants.currentLimits)
+    intakeMotor.getConfigurator().apply(IntakeConstants.currentLimits);
   }
 
-
-
+    /**
+    * Method to run intake a particuar setpoint 
+    *@param setpoint the percent outut at which the intake should run.
+    */
+    public void runIntake(double setpoint) {
+      intakeMotor.set(setpoint);
+    }
+    public void pullIntake() {
+      intakeMotor.set(0.2);
+    }
+    public void stopInake() {
+      intakeMotor.stopMotor();
+   }
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
-    SmartDashboard.putNumber(getName(), 0)
+    SmartDashboard.putNumber("Intake Percent Outpet", intakeMotor.get());
   }
 }
