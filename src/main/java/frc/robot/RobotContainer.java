@@ -84,9 +84,13 @@ public class RobotContainer {
         joystick1.R1().onTrue(new InstantCommand(() -> m_escalator.setPosition(154))); // l3
         joystick1.R2().onTrue(new InstantCommand(() -> m_escalator.setPosition(236)));  // l4
         joystick1.L1().onTrue(new InstantCommand(() -> m_escalator.setPosition(0)));
-        joystick1.cross().onTrue(new ParallelCommandGroup(new InstantCommand(m_indexer::intake), new InstantCommand(()->m_escalator.setPosition(54.5)), new InstantCommand(m_shooter::slowShooter)))
-                        .onFalse(new ParallelCommandGroup(new InstantCommand(m_indexer::stop), new InstantCommand(m_shooter::stop))); // intake
+        joystick1.cross().onTrue(new InstantCommand(()->m_escalator.setPosition(54.5))); // intake
         joystick1.square().onTrue(new InstantCommand(m_escalator::stop));
+        joystick1.povUp().onTrue(new InstantCommand(m_escalator::goUp)).onFalse(new InstantCommand(m_escalator::stop));
+        joystick1.povDown().onTrue(new InstantCommand(m_escalator::goDown)).onFalse(new InstantCommand(m_escalator::stop));
+        joystick1.triangle().onTrue(new ParallelCommandGroup(new InstantCommand(m_indexer::intake), new InstantCommand(m_shooter::slowShooter)))
+                .onFalse(new ParallelCommandGroup(new InstantCommand(m_indexer::stop), new InstantCommand(m_shooter::stop))); // intake
+
 
         joystick1.circle().onTrue(new InstantCommand(m_shooter::pullIntake)).onFalse(new InstantCommand(m_shooter::stop));
 

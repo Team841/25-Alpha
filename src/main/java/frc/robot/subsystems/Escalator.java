@@ -51,4 +51,12 @@ public class Escalator extends SubsystemBase {
         rightMotor.stopMotor();
     }
 
+    public void goUp(){
+        rightMotor.set(0.2);
+    }
+
+    public void goDown(){
+        rightMotor.set(-0.2);
+    }
+
 }
